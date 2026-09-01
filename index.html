@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="VLA-Precision: efficient real-world online reinforcement learning for precise vision-language-action manipulation.">
+    <meta name="keywords" content="vision-language-action, real-world reinforcement learning, robotic manipulation, VLA-Precision">
+    <meta name="theme-color" content="#7048f2">
+    <link rel="canonical" href="https://vla-precision.github.io/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vla-precision.github.io/">
+    <meta property="og:title" content="VLA-Precision">
+    <meta property="og:description" content="Asymmetric Co-Bootstrapping for efficient real-world online RL of vision-language-action models.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="VLA-Precision">
+    <meta name="twitter:description" content="Efficient real-world online RL for vision-language-action models.">
+    <title>VLA-Precision</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXW4PSB7K7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LXW4PSB7K7');
+    </script>
+
+    <link rel="preload" href="static/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="static/css/site.css">
+    <script src="static/js/fontawesome.all.min.js" defer></script>
+    <script src="static/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="hero">
+      <div class="container hero__inner">
+        <h1>
+          <span class="title-line"><span class="title-mark">VLA-Precision</span>: Asymmetric Co-Bootstrapping</span>
+          <span class="title-line">for Efficient Real-World Online RL of</span>
+          <span class="title-line">Vision-Language-Action Models</span>
+        </h1>
+        <p class="authors">Anonymous Authors</p>
+        <div class="hero__links" aria-label="Project resources">
+          <a class="button button--resource" href="https://anonymous.4open.science/r/vla-precision-anonymous" target="_blank" rel="noopener noreferrer">
+            <span class="button__icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+            <span>Code</span>
+          </a>
+          <a class="button button--resource" href="">
+            <span class="button__icon" aria-hidden="true"><i class="fas fa-file-pdf"></i></span>
+            <span>Paper</span>
+          </a>
+          <a class="button button--resource" href="https://anonymous.4open.science/r/PRIMA-8249" target="_blank" rel="noopener noreferrer">
+            <span class="button__icon" aria-hidden="true"><span class="robot-arm-icon"><span></span></span></span>
+            <span>Hardware</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="showcase" aria-labelledby="showcase-title">
+        <div class="container container--wide">
+          <aside class="platform-note" aria-label="Video viewing recommendation">
+            <span class="platform-note__title">Note:</span>
+            <p class="platform-note__text">
+              We recommend viewing videos in <span class="platform-note__fullscreen">fullscreen</span> on
+              <span class="platform-note__ubuntu">Ubuntu</span> for clearer rendering.
+              <span class="platform-note__windows">Windows</span> users can view them normally.
+            </p>
+          </aside>
+          <div class="section-heading section-heading--light">
+            <div>
+              <h2 id="showcase-title">High-precision chemistry manipulation</h2>
+            </div>
+          </div>
+
+          <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Nine high-precision task videos">
+            <button class="carousel__button carousel__button--previous" type="button" aria-label="Show previous task">
+              <span aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+            </button>
+            <div class="carousel__viewport" tabindex="0">
+              <div class="carousel__track">
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/pipette-tip-attachment.jpg" aria-label="Pipette Tip Attachment at 16 times speed">
+                    <source data-src="media/videos/real_world/Pipette%20Tip%20Attachment_16.mp4" type="video/mp4">
+                  </video>
+                  <p>Pipette Tip Attachment</p>
+                </article>
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/cuvette-transfer.jpg" aria-label="Cuvette Transfer at 16 times speed">
+                    <source data-src="media/videos/real_world/Cuvette%20Transfer_16.mp4" type="video/mp4">
+                  </video>
+                  <p>Cuvette Transfer</p>
+                </article>
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/tube-brushing.jpg" aria-label="Tube Brushing at 16 times speed">
+                    <source data-src="media/videos/real_world/Tube%20Brushing_16.mp4" type="video/mp4">
+                  </video>
+                  <p>Tube Brushing</p>
+                </article>
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/tube-rack-loading.jpg" aria-label="Tube Rack Loading at 16 times speed">
+                    <source data-src="media/videos/real_world/Tube%20Rack%20Loading_16.mp4" type="video/mp4">
+                  </video>
+                  <p>Tube Rack Loading</p>
+                </article>
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/pipette-transfer-and-ejection.jpg" aria-label="Pipette Transfer and Ejection at 16 times speed">
+                    <source data-src="media/videos/real_world/Pipette%20Transfer%20and%20Ejection_16.mp4" type="video/mp4">
+                  </video>
+                  <p>Pipette Transfer and Ejection</p>
+                </article>
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/2-ml-vial-transfer.jpg" aria-label="2 milliliter Vial Transfer at 16 times speed">
+                    <source data-src="media/videos/real_world/2%20mL%20Vial%20Transfer_16.mp4" type="video/mp4">
+                  </video>
+                  <p>2 mL Vial Transfer</p>
+                </article>
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/bulb-dropper-transfer.jpg" aria-label="Bulb Dropper Transfer at 16 times speed">
+                    <source data-src="media/videos/real_world/Bulb%20Dropper%20Transfer_16.mp4" type="video/mp4">
+                  </video>
+                  <p>Bulb Dropper Transfer</p>
+                </article>
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/alcohol-lamp-extinguishing.jpg" aria-label="Alcohol Lamp Extinguishing at 16 times speed">
+                    <source data-src="media/videos/real_world/Alcohol%20Lamp%20Extinguishing_16.mp4" type="video/mp4">
+                  </video>
+                  <p>Alcohol Lamp Extinguishing</p>
+                </article>
+                <article class="carousel__slide">
+                  <video muted loop playsinline preload="metadata" poster="media/posters/rubber-stopper-insertion.jpg" aria-label="Rubber Stopper Insertion at 16 times speed">
+                    <source data-src="media/videos/real_world/Rubber%20Stopper%20Insertion_16.mp4" type="video/mp4">
+                  </video>
+                  <p>Rubber Stopper Insertion</p>
+                </article>
+              </div>
+            </div>
+            <button class="carousel__button carousel__button--next" type="button" aria-label="Show next task">
+              <span aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+            </button>
+            <p class="carousel__status" aria-live="polite">Tasks 1–3 of 9</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="paper-section" aria-labelledby="abstract-title">
+        <div class="container text-container">
+          <div class="paper-heading">
+            <h2 id="abstract-title">Abstract</h2>
+          </div>
+          <div class="abstract-copy">
+            <p>Pretrained vision-language-action (VLA) models enable broad manipulation but remain unreliable in tasks demanding precision and repeatability. Applying real-world online reinforcement learning (RL) to VLA post-training enables autonomous trial-and-error improvement beyond demonstrations alone, but exposes two bottlenecks: 1) unreliable value signals can induce policy drift; 2) large-VLA overhead constrains throughput and sample efficiency. To address these challenges, we present VLA-Precision, an efficient real-world online RL framework featuring the Asymmetric Co-Bootstrapping (ACoB) algorithm and the ACoB-Stream architecture.</p>
+            <p>Specifically, ACoB establishes asymmetric co-bootstrapping across timescales: early intervention-guided behavioral learning rapidly improves policy performance while enhancing online experience quality. As autonomous experience accumulates, global return propagation and local preference ranking progressively calibrate value estimates, yielding relative action advantages for reference-bounded policy improvement while suppressing drift. To enable ACoB on large VLAs, we develop ACoB-Stream, a closed-loop experience–policy architecture that establishes invariant-state decoupling and on-demand streaming as design principles, delivering up to 10.9× improvements in throughput and computational efficiency.</p>
+            <p>Extensive evaluations on nine high-precision chemistry tasks across four categories and four robot embodiments show that VLA-Precision achieves 98.3% mean success rate in 45.8 min/task, with 27.6 s episodes running at 1.2× and 1.8× the speeds of VLA and RL baselines.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section" aria-labelledby="robustness-title">
+        <div class="container container--wide">
+          <div class="section-heading">
+            <div>
+              <h2 id="robustness-title">Robustness and Generalization</h2>
+            </div>
+          </div>
+
+          <div class="task-legend" aria-label="Task category legend">
+            <span class="task-legend__item"><span class="task-legend__swatch category-rich" aria-hidden="true"></span>Contact-rich</span>
+            <span class="task-legend__item"><span class="task-legend__swatch category-light" aria-hidden="true"></span>Contact-light</span>
+            <span class="task-legend__item"><span class="task-legend__swatch category-free" aria-hidden="true"></span>Contact-free</span>
+            <span class="task-legend__item"><span class="task-legend__swatch category-bimanual" aria-hidden="true"></span>Bimanual coordination</span>
+          </div>
+
+          <div class="video-grid">
+            <article class="video-card category-light">
+              <video controls muted loop playsinline preload="none" aria-label="Pipette Tip Attachment">
+                <source data-src="media/videos/real_world/Pipette%20Tip%20Attachment_2.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>Pipette Tip Attachment</h3>
+              </div>
+            </article>
+            <article class="video-card category-rich">
+              <video controls muted loop playsinline preload="none" aria-label="Cuvette Transfer">
+                <source data-src="media/videos/real_world/Cuvette%20Transfer_2.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>Cuvette Transfer</h3>
+              </div>
+            </article>
+            <article class="video-card category-bimanual">
+              <video controls muted loop playsinline preload="none" aria-label="Tube Brushing">
+                <source data-src="media/videos/real_world/Tube%20Brushing_4.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>Tube Brushing</h3>
+              </div>
+            </article>
+            <article class="video-card category-rich">
+              <video controls muted loop playsinline preload="none" aria-label="Tube Rack Loading">
+                <source data-src="media/videos/real_world/Tube%20Rack%20Loading_2.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>Tube Rack Loading</h3>
+              </div>
+            </article>
+            <article class="video-card category-free">
+              <video controls muted loop playsinline preload="none" aria-label="Pipette Transfer and Ejection">
+                <source data-src="media/videos/real_world/Pipette%20Transfer%20and%20Ejection_4.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>Pipette Transfer and Ejection</h3>
+              </div>
+            </article>
+            <article class="video-card category-rich">
+              <video controls muted loop playsinline preload="none" aria-label="2 milliliter Vial Transfer">
+                <source data-src="media/videos/real_world/2%20mL%20Vial%20Transfer_2.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>2 mL Vial Transfer</h3>
+              </div>
+            </article>
+            <article class="video-card category-free">
+              <video controls muted loop playsinline preload="none" aria-label="Bulb Dropper Transfer">
+                <source data-src="media/videos/real_world/Bulb%20Dropper%20Transfer_2.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>Bulb Dropper Transfer</h3>
+              </div>
+            </article>
+            <article class="video-card category-light">
+              <video controls muted loop playsinline preload="none" aria-label="Alcohol Lamp Extinguishing">
+                <source data-src="media/videos/real_world/Alcohol%20Lamp%20Extinguishing_2.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>Alcohol Lamp Extinguishing</h3>
+              </div>
+            </article>
+            <article class="video-card category-light">
+              <video controls muted loop playsinline preload="none" aria-label="Rubber Stopper Insertion">
+                <source data-src="media/videos/real_world/Rubber%20Stopper%20Insertion_2.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption">
+                <h3>Rubber Stopper Insertion</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section video-section--tinted" aria-labelledby="evaluation-title">
+        <div class="container container--wide">
+          <div class="section-heading">
+            <div>
+              <h2 id="evaluation-title">Experimental Evaluation</h2>
+            </div>
+          </div>
+
+          <div class="task-legend" aria-label="Task category legend">
+            <span class="task-legend__item"><span class="task-legend__swatch category-rich" aria-hidden="true"></span>Contact-rich</span>
+            <span class="task-legend__item"><span class="task-legend__swatch category-light" aria-hidden="true"></span>Contact-light</span>
+            <span class="task-legend__item"><span class="task-legend__swatch category-free" aria-hidden="true"></span>Contact-free</span>
+            <span class="task-legend__item"><span class="task-legend__swatch category-bimanual" aria-hidden="true"></span>Bimanual coordination</span>
+          </div>
+
+          <div class="video-grid">
+            <article class="video-card video-card--accelerated category-light">
+              <video controls muted loop playsinline preload="none" aria-label="Pipette Tip Attachment at 16 times speed">
+                <source data-src="media/videos/real_world/Pipette%20Tip%20Attachment_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>Pipette Tip Attachment</h3></div>
+            </article>
+            <article class="video-card video-card--accelerated category-rich">
+              <video controls muted loop playsinline preload="none" aria-label="Cuvette Transfer at 16 times speed">
+                <source data-src="media/videos/real_world/Cuvette%20Transfer_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>Cuvette Transfer</h3></div>
+            </article>
+            <article class="video-card video-card--accelerated category-bimanual">
+              <video controls muted loop playsinline preload="none" aria-label="Tube Brushing at 16 times speed">
+                <source data-src="media/videos/real_world/Tube%20Brushing_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>Tube Brushing</h3></div>
+            </article>
+            <article class="video-card video-card--accelerated category-rich">
+              <video controls muted loop playsinline preload="none" aria-label="Tube Rack Loading at 16 times speed">
+                <source data-src="media/videos/real_world/Tube%20Rack%20Loading_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>Tube Rack Loading</h3></div>
+            </article>
+            <article class="video-card video-card--accelerated category-free">
+              <video controls muted loop playsinline preload="none" aria-label="Pipette Transfer and Ejection at 16 times speed">
+                <source data-src="media/videos/real_world/Pipette%20Transfer%20and%20Ejection_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>Pipette Transfer and Ejection</h3></div>
+            </article>
+            <article class="video-card video-card--accelerated category-rich">
+              <video controls muted loop playsinline preload="none" aria-label="2 milliliter Vial Transfer at 16 times speed">
+                <source data-src="media/videos/real_world/2%20mL%20Vial%20Transfer_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>2 mL Vial Transfer</h3></div>
+            </article>
+            <article class="video-card video-card--accelerated category-free">
+              <video controls muted loop playsinline preload="none" aria-label="Bulb Dropper Transfer at 16 times speed">
+                <source data-src="media/videos/real_world/Bulb%20Dropper%20Transfer_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>Bulb Dropper Transfer</h3></div>
+            </article>
+            <article class="video-card video-card--accelerated category-light">
+              <video controls muted loop playsinline preload="none" aria-label="Alcohol Lamp Extinguishing at 16 times speed">
+                <source data-src="media/videos/real_world/Alcohol%20Lamp%20Extinguishing_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>Alcohol Lamp Extinguishing</h3></div>
+            </article>
+            <article class="video-card video-card--accelerated category-light">
+              <video controls muted loop playsinline preload="none" aria-label="Rubber Stopper Insertion at 16 times speed">
+                <source data-src="media/videos/real_world/Rubber%20Stopper%20Insertion_16.mp4" type="video/mp4">
+              </video>
+              <div class="video-card__caption"><h3>Rubber Stopper Insertion</h3></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview" aria-labelledby="overview-title">
+        <div class="container container--wide">
+          <div class="paper-heading paper-heading--centered">
+            <h2 id="overview-title">Method</h2>
+          </div>
+          <div class="figure-carousel" role="region" aria-roledescription="carousel" aria-label="VLA-Precision method figures">
+            <div class="figure-carousel__navigation" role="tablist" aria-label="Choose a figure">
+              <button type="button" role="tab" aria-selected="true">Overview</button>
+              <button type="button" role="tab" aria-selected="false">ACoB</button>
+              <button type="button" role="tab" aria-selected="false">ACoB Stream</button>
+              <button type="button" role="tab" aria-selected="false">Master Arm</button>
+            </div>
+            <div class="figure-carousel__stage">
+            <button class="figure-carousel__arrow figure-carousel__arrow--previous" type="button" aria-label="Show previous figure">
+              <span aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+            </button>
+            <div class="figure-carousel__viewport" tabindex="0">
+              <div class="figure-carousel__track">
+                <figure class="figure-carousel__slide">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/overview.png" width="2134" height="1200" loading="lazy" alt="VLA-Precision framework overview.">
+                  </div>
+                  <figcaption><strong>Overview.</strong> VLA-Precision framework overview.</figcaption>
+                </figure>
+                <figure class="figure-carousel__slide">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/acob.png" width="1839" height="791" loading="lazy" alt="Two-stage post-training pipeline of VLA-Precision.">
+                  </div>
+                  <figcaption><strong>Figure 2.</strong> Two-stage post-training pipeline of VLA-Precision.</figcaption>
+                </figure>
+                <figure class="figure-carousel__slide">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/acob-stream.png" width="1681" height="747" loading="lazy" alt="ACoB-Stream architecture.">
+                  </div>
+                  <figcaption><strong>Figure 3.</strong> ACoB-Stream architecture.</figcaption>
+                </figure>
+                <figure class="figure-carousel__slide">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/master-arm.png" width="1920" height="1080" loading="lazy" alt="Active UR5e-isomorphic master CAD model and prototype.">
+                  </div>
+                  <figcaption><strong>Figure 4.</strong> Active UR5e-isomorphic master: CAD model and prototype.</figcaption>
+                </figure>
+              </div>
+            </div>
+            <button class="figure-carousel__arrow figure-carousel__arrow--next" type="button" aria-label="Show next figure">
+              <span aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+            </button>
+            </div>
+            <p class="figure-carousel__status" aria-live="polite">Figure 1 of 4</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="paper-section results-section" aria-labelledby="results-title">
+        <div class="container container--wide">
+          <div class="paper-heading paper-heading--centered">
+            <h2 id="results-title">Experimental Results</h2>
+          </div>
+          <div class="figure-carousel figure-carousel--adaptive" role="region" aria-roledescription="carousel" aria-label="VLA-Precision experimental results">
+            <div class="figure-carousel__navigation" role="tablist" aria-label="Choose an experimental result">
+              <button type="button" role="tab" aria-selected="true">Performance</button>
+              <button type="button" role="tab" aria-selected="false">Training</button>
+              <button type="button" role="tab" aria-selected="false">Testing</button>
+              <button type="button" role="tab" aria-selected="false">Efficiency</button>
+              <button type="button" role="tab" aria-selected="false">Ablation</button>
+              <button type="button" role="tab" aria-selected="false">Horizon</button>
+            </div>
+            <div class="figure-carousel__stage">
+            <button class="figure-carousel__arrow figure-carousel__arrow--previous" type="button" aria-label="Show previous result">
+              <span aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+            </button>
+            <div class="figure-carousel__viewport" tabindex="0">
+              <div class="figure-carousel__track">
+                <figure class="figure-carousel__slide">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/performance.png" width="1048" height="354" loading="lazy" alt="Real-world performance across chemistry manipulation tasks.">
+                  </div>
+                  <figcaption><strong>Performance.</strong> Results across chemistry manipulation tasks.</figcaption>
+                </figure>
+                <figure class="figure-carousel__slide">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/training.png" width="1891" height="1287" loading="lazy" alt="Real-world online reinforcement learning training dynamics on five representative tasks.">
+                  </div>
+                  <figcaption><strong>Training.</strong> Online RL dynamics on five representative tasks.</figcaption>
+                </figure>
+                <figure class="figure-carousel__slide">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/testing.png" width="1876" height="681" loading="lazy" alt="Real-world test performance on five representative tasks.">
+                  </div>
+                  <figcaption><strong>Testing.</strong> Test performance on five representative tasks.</figcaption>
+                </figure>
+                <figure class="figure-carousel__slide figure-carousel__slide--compact">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/efficiency.png" width="1021" height="659" loading="lazy" alt="Training throughput and latency comparison.">
+                  </div>
+                  <figcaption><strong>Efficiency.</strong> Training throughput and latency comparison.</figcaption>
+                </figure>
+                <figure class="figure-carousel__slide">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/ablation.png" width="1522" height="1289" loading="lazy" alt="ACoB ablation training dynamics across four representative tasks.">
+                  </div>
+                  <figcaption><strong>Ablation.</strong> ACoB training dynamics across four representative tasks.</figcaption>
+                </figure>
+                <figure class="figure-carousel__slide figure-carousel__slide--compact">
+                  <div class="figure-carousel__media">
+                    <img src="media/figures/action-horizon.png" width="991" height="675" loading="lazy" alt="Action-horizon analysis on three representative precision-insertion tasks.">
+                  </div>
+                  <figcaption><strong>Action Horizon.</strong> Analysis on three representative precision-insertion tasks.</figcaption>
+                </figure>
+              </div>
+            </div>
+            <button class="figure-carousel__arrow figure-carousel__arrow--next" type="button" aria-label="Show next result">
+              <span aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+            </button>
+            </div>
+            <p class="figure-carousel__status" aria-live="polite">Result 1 of 6</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>Website template borrowed from <a href="https://resemact.github.io/" target="_blank" rel="noopener noreferrer">ReSemAct</a>.</p>
+      </div>
+    </footer>
+  </body>
+</html>
