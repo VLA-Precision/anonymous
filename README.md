@@ -1,1 +1,1 @@
-# VLA-Precision.github.io
+# VLA-Precision Anonymous Project Page
